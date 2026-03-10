@@ -1,0 +1,206 @@
+.controlPanel {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 24px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.header {
+  margin-bottom: 24px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 16px;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.primary {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+}
+
+.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+}
+
+.secondary {
+  background: #333;
+  color: #ddd;
+  border: 1px solid #555;
+}
+
+.secondary:hover:not(:disabled) {
+  background: #3a3a3a;
+  border-color: #666;
+  color: #fff;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.statistics {
+  background: #252525;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.statsTitle {
+  font-weight: 700;
+  font-size: 12px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #3a3a3a;
+  padding-bottom: 8px;
+}
+
+.statGroup {
+  margin-bottom: 16px;
+}
+
+.statGroup:last-child {
+  margin-bottom: 0;
+}
+
+.statGroupTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 6px;
+  padding: 4px 0;
+}
+
+.label {
+  color: #999;
+}
+
+.value {
+  color: #2196F3;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.statusBadge {
+  background: rgba(33, 150, 243, 0.2);
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid #2196F3;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(33, 150, 243, 0.1);
+  border-radius: 4px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #666;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+.info {
+  background: #252525;
+  border: 1px solid #3a3a3a;
+  border-left: 3px solid #2196F3;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.info h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  color: #2196F3;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info li {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #bbb;
+  margin-bottom: 4px;
+}
+
+.info li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .controlPanel {
+    width: 100%;
+    max-height: auto;
+  }
+}
